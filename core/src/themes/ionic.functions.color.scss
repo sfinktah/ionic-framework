@@ -1,3 +1,5 @@
+@use "ionic.theme.default" as defaultTheme;
+
 // Gets the active color's css variable from a variation. Alpha is optional.
 // --------------------------------------------------------------------------------------------
 // Example usage:
@@ -20,7 +22,7 @@
 // ion-color(primary, base, 0.5) => rgba(var(--ion-color-primary-rgb, 56, 128, 255), 0.5)
 // --------------------------------------------------------------------------------------------
 @function ion-color($name, $variation, $alpha: null, $rgb: null) {
-  $values: map-get($colors, $name);
+  $values: map-get(defaultTheme.$colors, $name);
   $value: map-get($values, $variation);
   $variable: --ion-color-#{$name}-#{$variation};
 

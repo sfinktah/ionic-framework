@@ -1,9 +1,10 @@
-@import "./badge";
-@import "./badge.ios.vars";
+@use "badge";
+@use "badge.ios.vars" as vars;
+@use "../../themes/ionic.mixins" as mixins;
 
 // iOS Badge
 // --------------------------------------------------
 
 :host {
-  @include border-radius($badge-ios-border-radius);
+  @include mixins.border-radius(vars.$badge-ios-border-radius);
 }
