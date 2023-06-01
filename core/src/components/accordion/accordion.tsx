@@ -42,6 +42,7 @@ export class Accordion implements ComponentInterface {
   private contentEl: HTMLDivElement | undefined;
   private contentElWrapper: HTMLDivElement | undefined;
   private headerEl: HTMLDivElement | undefined;
+  private static MyVar = 123;
 
   private currentRaf: number | undefined;
 
@@ -146,6 +147,7 @@ export class Accordion implements ComponentInterface {
   };
 
   private getSlottedHeaderIonItem = () => {
+    console.log(Accordion.MyVar);
     const { headerEl } = this;
     if (!headerEl) {
       return;
