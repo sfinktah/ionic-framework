@@ -14,7 +14,7 @@ runs:
       shell: bash
     - name: Install Stencil Nightly
       working-directory: ./core
-      run: npm i @stencil/core@nightly
+      run: npm i @stencil/core@3.3.0-dev.1685649498.3700f1b
       shell: bash
     - name: Build Core
       run: npm run build -- --ci
